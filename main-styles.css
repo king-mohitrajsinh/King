@@ -31,7 +31,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: url("gallery/MAIN_HERO.jpg") center/cover;
+    background: url("MAIN_HERO.jpg") center/cover;
     filter: blur(2px);
     width: 100%;
     height: 100vh;
@@ -394,7 +394,7 @@
   
   @media screen and (max-width: 600px) {
     .hero-img{
-      background-image: url('gallery/MAIN_HERO2.jpg');
+      background-image: url('MAIN_HERO2.jpg');
       filter: blur(3px);
     }
     .logo {
@@ -426,7 +426,7 @@
   
   @media screen and (min-width: 1025px) {
     .logo {
-      background-image: url('gallery/king-logo2.png');
+      background-image: url('king-logo2.png');
       padding-top: -50%;
     }
   
@@ -449,7 +449,7 @@
       width: 1200px;
       margin: 0 auto;
       .logo {
-        background-image: url('gallery/King-logo.png');
+        background-image: url('King-logo.png');
      
       }
       .name {

@@ -409,7 +409,7 @@ button {
     background-position: center;
     background-size: contain;
     padding-left: 4vh;
-    background-image: url('gallery/King-logo.png');
+    background-image: url('King-logo.png');
 }
 
 @media screen and (max-width: 600px) {
@@ -418,7 +418,7 @@ button {
         padding-top: 0vh;
         margin-left: 2vh;
         object-fit: cover;
-        background-image: url('gallery/King-logo.png');
+        background-image: url('King-logo.png');
     }
     .name {
         padding-left: 10vh;
@@ -440,7 +440,7 @@ button {
 
 @media screen and (min-width: 1025px) {
     .logo {
-        background-image: url('gallery/King-logo.png');
+        background-image: url('King-logo.png');
         padding-top: -50%;
     }
     .menu-social {
@@ -460,7 +460,7 @@ button {
         width: 1200px;
         margin: 0 auto;
         .logo {
-            background-image: url('gallery/King-logo.png');
+            background-image: url('King-logo.png');
         }
     }
 }

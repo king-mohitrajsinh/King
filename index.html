@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Welcome Page with Loader</title>
+
+</head>
+
+<body class="loaded">
+    <div class="welcome-text"></div>
+</body>
+
+    <script>
+        const letterDuration = 100;
+        const welcomeText = "W E L C O M E";
+
+        function showWelcomeText(index) {
+            if (index < welcomeText.length) {
+                const letterElement = document.createElement('span');
+                letterElement.textContent = welcomeText[index];
+                document.querySelector('.welcome-text').appendChild(letterElement);
+                setTimeout(() => {
+                    showWelcomeText(index + 1);
+                }, letterDuration);
+            } else {
+                setTimeout(() => {
+                    document.body.classList.add('loaded');
+                }, 500); // Delay before adding the "loaded" class (in milliseconds)
+
+                setTimeout(() => {
+                    window.location.href = 'main.html';
+                }, 1000); // Delay before redirecting (in milliseconds)
+            }
+        }
+
+        showWelcomeText(0);
+
+    </script>
+</html>

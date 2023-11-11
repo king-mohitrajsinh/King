@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Add this script tag at the end of the <body> section in your HTML file -->
+   <link rel="stylesheet" href="Gallery.css">
+    <style>
+        
+    </style>
+    <title>Instagram-like Gallery</title>
+</head>
+
+<body>
+    <header class="head-logo">
+        <div class="logo"></div>
+           <div class="header">
+              <ul class="navigation-menu">
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="AboutMe.html">ABOUT</a></li>
+                <li><a href="mailto:mohitrajjadeja4@gmail.com">CONTACT</a></li>
+              </ul>
+              <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          
+            <div class="navigation">
+                <ul class="navigation-menu">
+                  <li><a href="main.html">HOME</a></li>
+                  <li><a href="AboutMe.html">ABOUT</a></li>
+                <li><a href="mailto:mohitrajjadeja4@gmail.com">CONTACT</a></li>
+
+              </ul>
+            </div>
+          
+           
+  </header>
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+      const imagesData = [
+          { id: 1, src: 'gallery/IMG1.jpg', alt: 'Image 1' },
+          { id: 2, src: 'gallery/IMG2.jpg', alt: 'Image 2' },
+          { id: 3, src: 'gallery/IMG3.jpg', alt: 'Image 3' },
+          { id: 4, src: 'gallery/IMG4.jpg', alt: 'Image 4' },
+          { id: 5, src: 'gallery/IMG5.jpg', alt: 'Image 5' },
+          { id: 6, src: 'gallery/IMG6.jpg', alt: 'Image 6' },
+          { id: 7, src: 'gallery/IMG7.jpg', alt: 'Image 7' },
+          { id: 8, src: 'gallery/IMG8.jpg', alt: 'Image 8' },
+          { id: 9, src: 'gallery/IMG9.jpg', alt: 'Image 9' },
+          { id: 10, src: 'gallery/IMG10.jpg', alt: 'Image 10' },
+          { id: 11, src: 'gallery/IMG11.jpg', alt: 'Image 11' },
+          { id: 12, src: 'gallery/IMG12.jpg', alt: 'Image 12' }
+      ];
+      const galleryElement = document.getElementById('gallery');
+  
+      imagesData.forEach(image => {
+          const imageCard = document.createElement('div');
+          imageCard.className = 'image-card';
+  
+          const img = document.createElement('img');
+          img.src = image.src;
+          img.alt = image.alt;
+          img.loading = 'lazy';
+  
+          img.onload = () => {
+              img.classList.add('loaded');
+          };
+  
+          imageCard.appendChild(img);
+  
+          galleryElement.appendChild(imageCard);
+      });
+  
+      function toggleMenu() {
+          var hamburger = document.querySelector('.hamburger');
+          var navigation = document.querySelector('.navigation');
+  
+          hamburger.classList.toggle('open');
+          navigation.classList.toggle('active');
+      }
+  </script>
+  
+</body>
+
+</html>

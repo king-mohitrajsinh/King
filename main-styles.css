@@ -391,7 +391,7 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  padding-left: 4vh;
+  margin-left: 4vh;
 
 }
 
@@ -433,7 +433,7 @@ button {
 
 @media screen and (min-width: 1025px) {
   .logo {
-    background-image: url('king-logo2.png');
+    background-image: url('king-logo.png');
     padding-top: -50%;
   }
 
